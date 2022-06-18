@@ -1,8 +1,5 @@
-<p>test1</p>
-
 @extends('layouts.app')
 
-<p>test2</p>
 @section('content')
 <div class="container">
     <p class="mt50">
