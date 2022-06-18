@@ -17,5 +17,8 @@
             <input class="input_file_upload" type="file" id="file_upload">
         </label>
     </p>
+    <p class="mt50">
+        <button type="submit" class="btn_green">保存</button>
+    </p>
 </div>
 @endsection
