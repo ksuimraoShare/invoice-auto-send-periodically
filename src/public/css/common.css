@@ -1,0 +1,128 @@
+dl dt {
+    width: 180px;
+    padding: 10px 0;
+    float: left;
+    clear: both;
+}
+
+dl dd {
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.div_border_gray {
+    border: solid 1px #dcdcdc;
+}
+
+.div_border_bottom_gray {
+    border-bottom: solid 1px #dcdcdc;
+}
+
+/*---------------------------------------------------*/
+/*	見出し系
+/*---------------------------------------------------*/
+.h1_gray {
+    font-size: 28px;
+    color: #828282;
+}
+
+.h2_gray {
+    font-size: 20px;
+    color: #828282;
+}
+
+/*---------------------------------------------------*/
+/*	table系
+/*---------------------------------------------------*/
+.table_border_gray {
+    border-collapse: collapse;
+}
+
+.table_border_gray th,
+td {
+    border: solid 1px #828282;
+    padding: 10px;
+}
+
+/*---------------------------------------------------*/
+/*	link系
+/*---------------------------------------------------*/
+.link_green:hover {
+    color: #3AD6B2;
+}
+
+/*---------------------------------------------------*/
+/*	button系
+/*---------------------------------------------------*/
+.btn_green {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background: #3AD6B2;
+    color: #fff;
+    border: solid 1px #dcdcdc;
+    border-radius: 5px;
+}
+
+/*---------------------------------------------------*/
+/*	input系
+/*---------------------------------------------------*/
+
+.input_text_border_gray {
+    padding: 5px 0;
+    border: solid 2px #dcdcdc;
+    border-radius: 5px;
+}
+
+.input_file_upload {
+    display: none;
+}
+
+.label_file_upload {
+    color: #fff;
+    background-color: #3AD6B2;
+    padding: 10px;
+    border: double 4px #AAAAAA;
+    border-radius: 10px;
+}
+
+.search_container {
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #999;
+    display: block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    height: 2.3em;
+    width: 260px;
+    overflow: hidden;
+}
+
+.search_container input[type="text"] {
+    border: none;
+    height: 2.0em;
+    width: 210px;
+}
+
+.search_container input[type="text"]:focus {
+    outline: 0;
+}
+
+.search_container input[type="submit"] {
+    cursor: pointer;
+    font-family: FontAwesome;
+    font-size: 1.3em;
+    border: none;
+    background: none;
+    color: #25C49F;
+    position: absolute;
+    width: 2.5em;
+    height: 2.5em;
+    right: 0;
+    top: -10px;
+    outline: none;
+}
