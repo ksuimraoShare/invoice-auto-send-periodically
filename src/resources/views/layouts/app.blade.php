@@ -12,6 +12,10 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/global-navigation.css">
+        <link rel="stylesheet" type="text/css" href="css/parts.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
@@ -22,14 +26,12 @@
 
             <!-- Page Heading -->
             <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
             </header>
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                <p>contentのところ</p>
+                @yield('content')
             </main>
         </div>
     </body>
