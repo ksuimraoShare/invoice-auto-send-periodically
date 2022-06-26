@@ -5,17 +5,17 @@
     {!! Form::open(['route'=>'own_company_edit_save']) !!}
         <p class="mt50">
             <span>会社名：</span>
-            <input name="company_name" class="input_text_border_gray" type="text">
+            {{Form::text('company_name', null, ['class' => 'input_text_border_gray'])}}
         </p>
         <p class="mt50">
             <span>メールアドレス：</span>
-            <input name="email" class="input_text_border_gray" type="text">
+            {{Form::text('email', null, ['class' => 'input_text_border_gray'])}}
         </p>
         <p class="mt50">
             <span>印鑑画像：</span>
             <label class="label_file_upload" for="file_upload">
                 ファイルを選択して下さい
-                <input name="name_stamp_image_path" class="input_file_upload" type="file" id="file_upload">
+                {{Form::file('name_stamp_image_path', ['class'=>'input_file_upload'])}}
             </label>
         </p>
         <p class="mt50">
