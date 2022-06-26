@@ -5,11 +5,11 @@
     {!! Form::open(['route'=>'own_company_edit_save']) !!}
         <p class="mt50">
             <span>会社名：</span>
-            {{Form::text('company_name', null, ['class' => 'input_text_border_gray'])}}
+            {{Form::text('company_name', $user->name, ['class' => 'input_text_border_gray'])}}
         </p>
         <p class="mt50">
             <span>メールアドレス：</span>
-            {{Form::text('email', null, ['class' => 'input_text_border_gray'])}}
+            {{Form::text('email', $user->email, ['class' => 'input_text_border_gray'])}}
         </p>
         <p class="mt50">
             <span>印鑑画像：</span>

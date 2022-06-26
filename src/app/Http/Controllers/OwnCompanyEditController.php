@@ -9,7 +9,8 @@ class OwnCompanyEditController extends Controller
 {
     public function index()
     {   
-        return view('own_company_edit');
+        $user = Auth::user();
+        return view('own_company_edit', compact('user'));
     }
     public function save(Request $request)
     {   
