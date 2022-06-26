@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OwnCompanyEditController extends Controller
 {
@@ -10,13 +11,20 @@ class OwnCompanyEditController extends Controller
     {   
         return view('own_company_edit');
     }
-    public function save()
+    public function save(Request $request)
     {   
         $validatedParam = $request->only([
             'company_name',
             'email',
             'name_stamp_image_path'
         ]);
+
+        $user = Auth::user();
+        $user->name = $validatedParam['company_name'];
+        $user->email = $validatedParam['email'];
+        $user->name_stamp_image_path = $validatedParam['name_stamp_image_path'];
+        $user->save();
+
         return view('own_company_edit');
     }
 }

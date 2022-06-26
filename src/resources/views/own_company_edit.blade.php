@@ -15,7 +15,7 @@
             <span>印鑑画像：</span>
             <label class="label_file_upload" for="file_upload">
                 ファイルを選択して下さい
-                {{Form::file('name_stamp_image_path', ['class'=>'input_file_upload'])}}
+                {{Form::file('name_stamp_image_path', ['class'=>'input_file_upload','id'=>'file_upload'])}}
             </label>
         </p>
         <p class="mt50">
