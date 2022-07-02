@@ -3,6 +3,11 @@
 @section('content')
 <div class="container">
     {!! Form::open(['route'=>'own_company_edit_save']) !!}
+        @isset($exception_error_message)
+            <p class="mt50">
+                <span class="error_message">{{ $exception_error_message }}</span>
+            </p>
+        @endisset
         <p class="mt50">
             @error('company_name')
                 <p class="error_message">{{ $message }}</p>

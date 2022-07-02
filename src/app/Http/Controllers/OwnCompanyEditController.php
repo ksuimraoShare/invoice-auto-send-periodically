@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class OwnCompanyEditController extends Controller
 {
@@ -12,6 +13,7 @@ class OwnCompanyEditController extends Controller
         $user = Auth::user();
         return view('own_company_edit', compact('user'));
     }
+
     public function save(Request $request)
     {   
         $request->validate([
@@ -29,8 +31,21 @@ class OwnCompanyEditController extends Controller
         $user->name = $validatedParam['company_name'];
         $user->email = $validatedParam['email'];
         $user->name_stamp_image_path = $validatedParam['name_stamp_image_path'];
-        $user->save();
+        
+        try {
+            DB::transaction(function () use($request, $user) {
+                $user->save();
+            });
 
-        return view('own_company_edit');
+        } catch (Throwable $e) {
+            $exception_error_message = config('const.ERROR_MESSAGE_FAIL_SAVE');
+            $data = [
+                'user' => $user,
+                'exception_error_message' => $exception_error_message
+            ];
+            return view('own_company_edit', $data);
+        }
+
+        return view('own_company_edit', compact('user'));
     }
 }
