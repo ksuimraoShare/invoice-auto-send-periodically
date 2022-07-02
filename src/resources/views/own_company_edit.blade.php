@@ -4,10 +4,16 @@
 <div class="container">
     {!! Form::open(['route'=>'own_company_edit_save']) !!}
         <p class="mt50">
+            @error('company_name')
+                <p class="error_message">{{ $message }}</p>
+            @enderror
             <span>会社名：</span>
             {{Form::text('company_name', $user->name, ['class' => 'input_text_border_gray'])}}
         </p>
         <p class="mt50">
+            @error('email')
+                <p class="error_message">{{ $message }}</p>
+            @enderror
             <span>メールアドレス：</span>
             {{Form::text('email', $user->email, ['class' => 'input_text_border_gray'])}}
         </p>

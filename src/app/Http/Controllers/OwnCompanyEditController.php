@@ -14,6 +14,11 @@ class OwnCompanyEditController extends Controller
     }
     public function save(Request $request)
     {   
+        $request->validate([
+            'company_name' => 'required|max:255',
+            'email' => 'required|max:255|email:strict,dns,spoof',
+        ]);
+
         $validatedParam = $request->only([
             'company_name',
             'email',
