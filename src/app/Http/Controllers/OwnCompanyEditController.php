@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Log;
 
 class OwnCompanyEditController extends Controller
 {
@@ -39,7 +38,7 @@ class OwnCompanyEditController extends Controller
             });
 
         } catch (\Exception $e) {
-            Log::error(report($e));
+            report($e);
             $exception_error_message = config('const.ERROR_MESSAGE_FAIL_SAVE');
             $data = [
                 'user' => $user,
