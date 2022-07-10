@@ -11,9 +11,11 @@
         <p class="mt50">
             <button type="submit" class="btn_green">請求先を追加</button>
         </p>
-        <p class="mt20">
-            <a class="link_green" href="">会社名</a>
-        </p>
+        @foreach ($clients as $client)
+            <p class="mt20">
+                <a class="link_green" href="">{{ $client->name }}</a>
+            </p>
+        @endforeach
     </div>
 </div>
 @endsection
