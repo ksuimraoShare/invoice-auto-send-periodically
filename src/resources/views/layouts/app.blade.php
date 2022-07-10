@@ -30,7 +30,6 @@
 
             <!-- Page Content -->
             <main>
-                <p>contentのところ</p>
                 @yield('content')
             </main>
         </div>
