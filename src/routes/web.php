@@ -27,5 +27,3 @@ require __DIR__.'/auth.php';
 
 Route::get('/own_company_edit', [OwnCompanyEditController::class, 'index']);
 Route::post('/own_company_edit', [OwnCompanyEditController::class, 'save'])->name('own_company_edit_save');
-
-Route::get('/client_list', [ClientListController::class, 'index']);
